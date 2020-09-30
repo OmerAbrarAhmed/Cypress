@@ -1,7 +1,6 @@
 describe('Operation Portal Orders Page Functioanality', function() {
-	it('Visits the Orders Page', function() {
+	it('Visits the Orders Page', function() {		
 		
-		cy.visit('https://hs-staging.com/operation/en/');
 		cy.fixture('default-user').then((user) => {
         	this.user = user
 		cy.Login(this.user.username, this.user.password)    
@@ -59,7 +58,7 @@ cy.fixture('order-ids.json').then((id) => {
      this.id = id 
         cy.get('#by_id').type(this.id.OrderID1)
              cy.get('.col-sm-6 > .btn').click();
-                cy.url().should('include',this.id.OrderID1)
+                cy.url().should('include',this.id.OrderID2)
 })
 	
 })	
